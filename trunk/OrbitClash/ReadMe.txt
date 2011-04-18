@@ -68,14 +68,14 @@ Date: April 2011
 -------------------------------------------------------------------------------
 4. Configuration:
 
-	Compile time only; for now.  See the 'Configuration.cs' file.
+	Compile time only; for now.  See the 'Configuration.cs' source code file.
 
 	
 -------------------------------------------------------------------------------
 5.Compiling from Source:
 
-	Use Microsoft Visual Studio 2010 Professional on Microsoft .NET 4.0 
-	framework.
+	Use Microsoft Visual Studio 2010 Professional with Microsoft .NET 4.0 
+	Client Profile Framework.
 
 
 -------------------------------------------------------------------------------
@@ -104,5 +104,7 @@ Date: April 2011
 
 	- SDL <http://www.libsdl.org/>
 	- SDL.NET <http://cs-sdl.sourceforge.net/>
-	- See "Images/Image Attribution.txt"
-	- See "Sounds/Sound Attribution.txt"
+	
+	- Image Credits: see "Images\Image Attribution.txt"
+	- Sound Credits: see "Sounds\Sound Attribution.txt"
+	- Font Credits: see "Fonts\Orbitron\readme.txt"
