@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: Thruster.cs 1990 2011-04-18 17:55:25Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Mar 2011

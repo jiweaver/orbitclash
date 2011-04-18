@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: OrbitClash.cs 1996 2011-04-18 18:42:03Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Mar 2011

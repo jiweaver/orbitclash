@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: GravityWell.cs 1975 2011-04-18 13:32:33Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Mar 2011

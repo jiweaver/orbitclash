@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: SolidEntity.cs 1986 2011-04-18 16:41:03Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Mar 2011

@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: MainTitle.cs 1977 2011-04-18 13:47:53Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Mar 2011

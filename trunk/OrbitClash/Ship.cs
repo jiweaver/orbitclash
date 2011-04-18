@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: Ship.cs 1995 2011-04-18 18:38:21Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Mar 2011

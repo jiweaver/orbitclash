@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: Cannon.cs 1991 2011-04-18 18:02:20Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Mar 2011

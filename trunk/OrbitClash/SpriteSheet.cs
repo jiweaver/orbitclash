@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: SpriteSheet.cs 1976 2011-04-18 13:39:28Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Mar 2011
