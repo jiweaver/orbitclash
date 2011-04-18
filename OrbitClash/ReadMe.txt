@@ -72,7 +72,7 @@ Date: April 2011
 
 	
 -------------------------------------------------------------------------------
-5.Compiling from Source:
+5. Compiling from Source:
 
 	Use Microsoft Visual Studio 2010 Professional with Microsoft .NET 4.0 
 	Client Profile Framework.
