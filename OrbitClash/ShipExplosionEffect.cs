@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: ShipExplosionEffect.cs 1930 2011-04-17 16:07:45Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Mar 2011

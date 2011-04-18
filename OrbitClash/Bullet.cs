@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: Bullet.cs 1982 2011-04-18 15:25:25Z weaver $
+/* $Id$
  *
  * Description: Holds info about a bullet.
  */

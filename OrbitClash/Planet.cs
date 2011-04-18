@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: Planet.cs 1984 2011-04-18 16:02:32Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Mar 2011

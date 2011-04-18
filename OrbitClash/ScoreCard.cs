@@ -22,7 +22,7 @@
 
 #region Header Comments
 
-/* $Id: ScoreCard.cs 1989 2011-04-18 17:35:25Z weaver $
+/* $Id$
  *
  * Author: Justin Weaver
  * Date: Apr 2011
