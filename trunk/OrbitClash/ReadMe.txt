@@ -1,8 +1,8 @@
-﻿Title: OrbitClash
-Author: Justin Weaver
-Date: April 2011
-Description: ReadMe / User Manual
+﻿OrbitClash ReadMe/User-Manual
 
+OrbitClash Homepage: http://orbitclash.googlecode.com
+Author: Justin Weaver <piranther@gmail.com>
+Date: April 2011
 
 -------------------------------------------------------------------------------
 1. License:
@@ -29,29 +29,31 @@ Description: ReadMe / User Manual
 -------------------------------------------------------------------------------
 2. Introduction:
 
-OrbitClash is my very first game!
-- Open source (GPLv3 License)
-- Written in C#
-- Uses SDL via the SDL.NET wrapper
+	Facts:
+		- OrbitClash is my very first video game!
+		- It was inspired by the classic game Spacewar! 
+
+	Specs:
+		- Open source (GPLv3 License)
+		- Written in C#
+		- Uses SDL via the SDL.NET wrapper
+
+	Features:
+		- Sights, sounds, and spectacles: the likes of which test the 
+		very limits of the imagination of even the most exceptional fruit bat.
 
 
 -------------------------------------------------------------------------------
-3. Compiling:
+3. Player Controls:
 
-Use Microsoft Visual Studio 2010 Professional on Microsoft .NET 4.0 framework.
-
-
--------------------------------------------------------------------------------
-4. Playing:
-
-Player One Controls:
+Player One Controls (The Yellow Ship):
 	Rotate-left: Left Arrow
 	Rotate-right: Right Arrow
 	Forward-thruster: Up Arrow
 	Reverse-thruster: Down Arrow
 	Fire-cannon: Right Alt
 	
-Player Two Controls:
+Player Two Controls (The Red Ship):
 	Rotate-left: A
 	Rotate-right: D
 	Forward-thruster: W
@@ -60,11 +62,17 @@ Player Two Controls:
 
 	
 -------------------------------------------------------------------------------
-5. Configuring:
+4. Configuration:
 
 	Compile time only; for now.  See the 'Configuration.cs' file.
 
 	
+-------------------------------------------------------------------------------
+5.Compiling from Source:
+
+Use Microsoft Visual Studio 2010 Professional on Microsoft .NET 4.0 framework.
+
+
 -------------------------------------------------------------------------------
 6. Wish List:
 
@@ -82,11 +90,12 @@ Player Two Controls:
 - Power-ups
 - Player profiles
 - Choice of ships /w various specs
-- An AI to play against
+- AI to play against
+- Installer for binary distribution
 
 
 -------------------------------------------------------------------------------
-6. References/Credits:
+7. References and Credits:
 
 - SDL <http://www.libsdl.org/>
 - SDL.NET <http://cs-sdl.sourceforge.net/>
