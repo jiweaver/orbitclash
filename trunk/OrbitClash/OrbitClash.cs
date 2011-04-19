@@ -391,7 +391,7 @@ namespace OrbitClash
 
         private void Impact(Ship ship, Bullet bullet)
         {
-            if (bullet.Owner == ship)
+            if (bullet.Owner == ship.Player)
             {
                 // I own this particle, thus it won't hurt me.
 

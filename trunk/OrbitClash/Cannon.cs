@@ -190,7 +190,7 @@ namespace OrbitClash
             Vector bulletVector = Vector.FromDirection(gunDirectionDeg, this.muzzleSpeed);
             bulletVector += shipVector;
 
-            Bullet cannonBullet = new Bullet(this.owner, this.bulletSurface, gunBarrelPos, bulletVector, Configuration.Ships.Cannon.Power, bulletLife);
+            Bullet cannonBullet = new Bullet(this.owner.Player, this.bulletSurface, gunBarrelPos, bulletVector, Configuration.Ships.Cannon.Power, bulletLife);
 
             /* Add the new bullet to the ship's particle collection so we can
              * tell it apart from bullets fired by the other ship.

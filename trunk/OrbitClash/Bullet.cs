@@ -45,7 +45,7 @@ namespace OrbitClash
         private float power;
 
         // Who launched it?
-        private Ship owner;
+        private Player owner;
 
         #endregion Fields
 
@@ -63,7 +63,7 @@ namespace OrbitClash
             }
         }
 
-        public Ship Owner
+        public Player Owner
         {
             get
             {
@@ -79,7 +79,7 @@ namespace OrbitClash
 
         #region Constructors
 
-        public Bullet(Ship owner, Surface bulletSurface, Point bulletPosition, Vector bulletVector, float power, int bulletLife)
+        public Bullet(Player owner, Surface bulletSurface, Point bulletPosition, Vector bulletVector, float power, int bulletLife)
             : base(GetBulletSprite(bulletSurface, bulletPosition), bulletPosition.X, bulletPosition.Y, bulletVector, bulletLife)
         {
             this.owner = owner;
