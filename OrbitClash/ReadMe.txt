@@ -39,12 +39,13 @@ Date: April 2011
 
 
 ------------------------------------------------------------------------------	
-2. Installation Steps:
+2. Installation:
 
-	1. Download the archive
-	2. Unzip it somewhere (a folder will be created)
-	3. Open the newly created folder
-	4. Run the file called OrbitClash.exe to start the game
+	Steps:
+		1. Download the archive
+		2. Unzip it somewhere (a folder will be created)
+		3. Open the newly created folder
+		4. Run the file called OrbitClash.exe to start the game
 
 
 -------------------------------------------------------------------------------
