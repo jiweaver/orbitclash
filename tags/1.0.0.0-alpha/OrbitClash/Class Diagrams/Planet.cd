@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="This class holds all the relevant information about a live cannon bullet particle.">
+    <Position X="18.513" Y="3.583" Height="0.845" Width="1.431" />
+  </Comment>
+  <Comment CommentText="This class holds all the relevant information about the planet.  It also manufactures gravity manipulators and provides an operation to draw the halo on the background image.">
+    <Position X="6.12" Y="0.5" Height="1.491" Width="1.608" />
+  </Comment>
+  <Class Name="OrbitClash.Planet">
+    <Position X="0.5" Y="0.5" Width="5.5" />
+    <Members>
+      <Method Name="GetPlanetSprite" Hidden="true" />
+      <Field Name="haloPosition" Hidden="true" />
+      <Field Name="haloSurface" Hidden="true" />
+      <Field Name="particleSystem" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQAAAQAAAAAAAAAKAAAACAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Planet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

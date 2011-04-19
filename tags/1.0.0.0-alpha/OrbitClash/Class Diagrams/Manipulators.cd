@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="The speed limit manipulator.">
+    <Position X="3.864" Y="3.24" Height="0.292" Width="1.898" />
+  </Comment>
+  <Class Name="OrbitClash.GravityWell">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <Members>
+      <Method Name="GetForce" Hidden="true" />
+      <Field Name="position" Hidden="true" />
+      <Field Name="power" Hidden="true" />
+      <Field Name="radius" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAAAAgAAAAIAAAAAEAAAABAAAAAgCAAAA=</HashCode>
+      <FileName>GravityWell.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OrbitClash.SpeedLimit">
+    <Position X="0.5" Y="3.25" Width="3.25" />
+    <Members>
+      <Field Name="limit" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>SpeedLimit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
