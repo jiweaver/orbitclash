@@ -128,20 +128,20 @@ namespace OrbitClash
         {
             public static class Player1
             {
-                public const Key Up = Key.UpArrow;
-                public const Key Down = Key.DownArrow;
-                public const Key Left = Key.LeftArrow;
-                public const Key Right = Key.RightArrow;
-                public const Key Fire = Key.RightAlt;
-            }
-
-            public static class Player2
-            {
                 public const Key Up = Key.W;
                 public const Key Down = Key.S;
                 public const Key Left = Key.A;
                 public const Key Right = Key.D;
                 public const Key Fire = Key.LeftControl;
+            }
+
+            public static class Player2
+            {
+                public const Key Up = Key.UpArrow;
+                public const Key Down = Key.DownArrow;
+                public const Key Left = Key.LeftArrow;
+                public const Key Right = Key.RightArrow;
+                public const Key Fire = Key.RightAlt;
             }
         }
 
