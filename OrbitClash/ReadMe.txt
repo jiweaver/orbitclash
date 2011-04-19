@@ -27,14 +27,14 @@ Date: April 2011
 1. Introduction:
 
 	Facts:
-		- My very first video game!
-		- Inspired by the classic game Spacewar! 
-		- Open source (GPLv3 License)
-		- Written in C# (requires Microsoft .NET 4.0)
-		- Uses SDL via the SDL.NET wrapper
+		* My very first video game!
+		* Inspired by the classic game Spacewar! 
+		* Open source (GPLv3 License)
+		* Written in C# (requires Microsoft .NET 4.0)
+		* Uses SDL via the SDL.NET wrapper
 
 	Features:
-		- Sights, sounds, and spectacles: the likes of which test the very
+		* Sights, sounds, and spectacles: the likes of which test the very
 		  limits of the imagination of even the most exceptional fruit bat.
 
 
@@ -51,19 +51,19 @@ Date: April 2011
 3. Player Controls:
 
 	Player One Controls (The Yellow Ship):
-		Rotate-left: Left Arrow
-		Rotate-right: Right Arrow
-		Forward-thruster: Up Arrow
-		Reverse-thruster: Down Arrow
-		Fire-cannon: Right Alt
-	
-	Player Two Controls (The Red Ship):
-		Rotate-left: A
-		Rotate-right: D
-		Forward-thruster: W
-		Reverse-thruster: S
-		Fire-cannon: Left Control
+		* Rotate-left: A
+		* Rotate-right: D
+		* Forward-thruster: W
+		* Reverse-thruster: S
+		* Fire-cannon: Left Control
 
+	Player Two Controls (The Red Ship):
+		* Rotate-left: Left Arrow
+		* Rotate-right: Right Arrow
+		* Forward-thruster: Up Arrow
+		* Reverse-thruster: Down Arrow
+		* Fire-cannon: Right Alt
+	
 	
 -------------------------------------------------------------------------------
 4. Configuration:
@@ -81,30 +81,30 @@ Date: April 2011
 -------------------------------------------------------------------------------
 6. Wish List:
 
-	- Graphic-effects when bullet hits ship
-	- Graphic-effects when ship hit ship
-	- Graphic-effects of ship damage level
-	- Configuration
-	- Joystick support
-	- Framerate-independent movement & predictive collision detection
-	- Ability to pause/unpause the game
-	- "Press 'H' for instructions' on main title screen
-	- Give SolidEntity objects "mass" to make physics more realistic
-	- Support higher resolutions
-	- Network play
-	- Power-ups
-	- Player profiles
-	- Choice of ships /w various specs
-	- AI to play against
-	- Installer for binary distribution
+	* Graphic-effects when bullet hits ship
+	* Graphic-effects when ship hit ship
+	* Graphic-effects of ship damage level
+	* Configuration
+	* Joystick support
+	* Framerate-independent movement & predictive collision detection
+	* Ability to pause/unpause the game
+	* "Press 'H' for instructions' on main title screen
+	* Give SolidEntity objects "mass" to make physics more realistic
+	* Support higher resolutions
+	* Network play
+	* Power-ups
+	* Player profiles
+	* Choice of ships /w various specs
+	* AI to play against
+	* Installer for binary distribution
 
 
 -------------------------------------------------------------------------------
 7. References and Credits:
 
-	- SDL <http://www.libsdl.org/>
-	- SDL.NET <http://cs-sdl.sourceforge.net/>
+	* SDL <http://www.libsdl.org/>
+	* SDL.NET <http://cs-sdl.sourceforge.net/>
 	
-	- Image Credits: see "Images\Image Attribution.txt"
-	- Sound Credits: see "Sounds\Sound Attribution.txt"
-	- Font Credits: see "Fonts\Orbitron\readme.txt"
+	* Image Credits: see "Images\Image Attribution.txt"
+	* Sound Credits: see "Sounds\Sound Attribution.txt"
+	* Font Credits: see "Fonts\Orbitron\readme.txt"
