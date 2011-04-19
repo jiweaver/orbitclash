@@ -89,7 +89,7 @@ Date: April 2011
 	* Joystick support
 	* Framerate-independent movement & predictive collision detection
 	* Ability to pause/unpause the game
-	* "Press 'H' for instructions' on main title screen
+	* "Press 'H' for instructions" on main title screen
 	* Give SolidEntity objects "mass" to make physics more realistic
 	* Support higher resolutions
 	* Network play
