@@ -41,7 +41,7 @@ using Font = SdlDotNet.Graphics.Font;
 
 namespace OrbitClash
 {
-    internal class MainTitle
+    internal class MainTitle : IDisposable
     {
         #region Fields
 
@@ -87,5 +87,58 @@ namespace OrbitClash
         }
 
         #endregion Operations
+
+        #region IDisposable
+
+        private bool disposed = false;
+
+        ~MainTitle()
+        {
+            Dispose(false);
+        }
+
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                // We haven't been disposed yet.
+
+                if (disposing)
+                {
+                    /* The method has been called directly or indirectly by a
+                     * user's code.  Dispose of managed resources here.
+                     */
+                    if (this.mainTitleFont != null)
+                    {
+                        this.mainTitleFont.Dispose();
+                        this.mainTitleFont = null;
+                    }
+
+                    if (this.creditMessageFont != null)
+                    {
+                        this.creditMessageFont.Dispose();
+                        this.creditMessageFont = null;
+                    }
+
+                    if (this.startMessageFont != null)
+                    {
+                        this.startMessageFont.Dispose();
+                        this.startMessageFont = null;
+                    }
+                }
+
+                // Dispose of unmanaged resources _only_ out here.
+
+                this.disposed = true;
+            }
+        }
+
+        #endregion IDisposable
     }
 }

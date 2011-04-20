@@ -41,7 +41,7 @@ using SdlDotNet.Particles;
 
 namespace OrbitClash
 {
-    internal class Planet : SolidEntity
+    internal class Planet : SolidEntity, IDisposable
     {
         #region Fields
 
@@ -143,5 +143,46 @@ namespace OrbitClash
         }
 
         #endregion Operations
+
+        #region IDisposable
+
+        private bool disposed = false;
+
+        ~Planet()
+        {
+            Dispose(false);
+        }
+
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                // We haven't been disposed yet.
+
+                if (disposing)
+                {
+                    /* The method has been called directly or indirectly by a
+                     * user's code.  Dispose of managed resources here.
+                     */
+                    if (this.haloSurface != null)
+                    {
+                        this.haloSurface.Dispose();
+                        this.haloSurface = null;
+                    }
+                }
+
+                // Dispose of unmanaged resources _only_ out here.
+
+                this.disposed = true;
+            }
+        }
+
+        #endregion IDisposable
     }
 }

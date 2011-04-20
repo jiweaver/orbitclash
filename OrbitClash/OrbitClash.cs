@@ -548,7 +548,12 @@ namespace OrbitClash
 
         #region IDisposable
 
-        private bool disposed;
+        private bool disposed = false;
+
+        ~OrbitClash()
+        {
+            Dispose(false);
+        }
 
         public void Dispose()
         {
@@ -556,22 +561,35 @@ namespace OrbitClash
             GC.SuppressFinalize(this);
         }
 
-        public void Close()
-        {
-            Dispose();
-        }
-
-        ~OrbitClash()
-        {
-            Dispose(false);
-        }
-
         protected virtual void Dispose(bool disposing)
         {
             if (!this.disposed)
             {
+                // We haven't been disposed yet.
+
                 if (disposing)
                 {
+                    /* The method has been called directly or indirectly by a
+                     * user's code.  Dispose of managed resources here.
+                     */
+                    if (this.mainTitle != null)
+                    {
+                        this.mainTitle.Dispose();
+                        this.mainTitle = null;
+                    }
+
+                    if (this.background != null)
+                    {
+                        this.background.Dispose();
+                        this.background = null;
+                    }
+
+                    if (this.planet != null)
+                    {
+                        this.planet.Dispose();
+                        this.planet = null;
+                    }
+
                     if (this.player1.Ship != null)
                     {
                         this.player1.Ship.Dispose();
@@ -582,6 +600,18 @@ namespace OrbitClash
                     {
                         this.player2.Ship.Dispose();
                         this.player2.Ship = null;
+                    }
+
+                    if (this.player1 != null)
+                    {
+                        this.player1.Dispose();
+                        this.player1 = null;
+                    }
+
+                    if (this.player2 != null)
+                    {
+                        this.player2.Dispose();
+                        this.player2 = null;
                     }
 
                     if (this.bulletShipImpactBounceSound != null)
@@ -608,6 +638,9 @@ namespace OrbitClash
                         this.shipShipImpactSound = null;
                     }
                 }
+
+                // Dispose of unmanaged resources _only_ out here.
+
                 this.disposed = true;
             }
         }

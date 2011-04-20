@@ -229,7 +229,12 @@ namespace OrbitClash
 
         #region IDisposable
 
-        private bool disposed;
+        private bool disposed = false;
+
+        ~Cannon()
+        {
+            Dispose(false);
+        }
 
         public void Dispose()
         {
@@ -237,17 +242,17 @@ namespace OrbitClash
             GC.SuppressFinalize(this);
         }
 
-        ~Cannon()
-        {
-            Dispose(false);
-        }
-
         protected virtual void Dispose(bool disposing)
         {
             if (!this.disposed)
             {
+                // We haven't been disposed yet.
+
                 if (disposing)
                 {
+                    /* The method has been called directly or indirectly by a
+                     * user's code.  Dispose of managed resources here.
+                     */
                     if (this.fireSound != null)
                     {
                         this.fireSound.Dispose();
@@ -260,6 +265,9 @@ namespace OrbitClash
                         this.dryFireSound = null;
                     }
                 }
+
+                // Dispose of unmanaged resources _only_ out here.
+
                 this.disposed = true;
             }
         }
