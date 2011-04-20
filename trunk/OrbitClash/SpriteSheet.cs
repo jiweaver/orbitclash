@@ -31,12 +31,13 @@
 
 #endregion Header Comments
 
+using System;
 using System.Drawing;
 using SdlDotNet.Graphics.Sprites;
 
 namespace OrbitClash
 {
-    internal class SpriteSheet
+    internal class SpriteSheet : IDisposable
     {
         #region Fields
 
@@ -136,5 +137,46 @@ namespace OrbitClash
         }
 
         #endregion Operations
+
+        #region IDisposable
+
+        private bool disposed = false;
+
+        ~SpriteSheet()
+        {
+            Dispose(false);
+        }
+
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                // We haven't been disposed yet.
+
+                if (disposing)
+                {
+                    /* The method has been called directly or indirectly by a
+                     * user's code.  Dispose of managed resources here.
+                     */
+                    if (this.bitmap != null)
+                    {
+                        this.bitmap.Dispose();
+                        this.bitmap = null;
+                    }
+                }
+
+                // Dispose of unmanaged resources _only_ out here.
+
+                this.disposed = true;
+            }
+        }
+
+        #endregion IDisposable
     }
 }
