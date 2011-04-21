@@ -107,6 +107,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Class Diagrams\Effects.cd" />
+    <None Include="Class Diagrams\ScoreCard.cd" />
     <None Include="Class Diagrams\Manipulators.cd" />
     <None Include="Class Diagrams\Player.cd" />
     <None Include="Class Diagrams\SpriteSheet.cd" />

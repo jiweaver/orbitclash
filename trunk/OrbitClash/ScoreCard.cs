@@ -47,6 +47,7 @@ namespace OrbitClash
         #region Fields
 
         private Player player;
+
         private Surface scoreCard;
 
         private Point displayPosition;
@@ -67,7 +68,23 @@ namespace OrbitClash
 
         #region Properties
 
-        public Point Position
+        public Player Player
+        {
+            get
+            {
+                return this.player;
+            }
+        }
+
+        public Surface Surface
+        {
+            get
+            {
+                return this.scoreCard;
+            }
+        }
+
+        public Point DisplayPosition
         {
             get
             {
@@ -112,42 +129,6 @@ namespace OrbitClash
             set
             {
                 this.suicides = value;
-            }
-        }
-
-        public float Shields
-        {
-            get
-            {
-                return this.player.Ship.Shields;
-            }
-        }
-
-        public int Ammo
-        {
-            get
-            {
-                return this.player.Ship.AmmoCount;
-            }
-        }
-
-        public Ship Ship
-        {
-            get
-            {
-                return this.player.Ship;
-            }
-            set
-            {
-                this.player.Ship = value;
-            }
-        }
-
-        public Surface Surface
-        {
-            get
-            {
-                return this.scoreCard;
             }
         }
 

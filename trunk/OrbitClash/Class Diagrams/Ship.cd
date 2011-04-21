@@ -62,7 +62,7 @@
     <Lollipop Position="0.245" />
   </Class>
   <Class Name="OrbitClash.Cannon">
-    <Position X="3.75" Y="0.5" Width="2" />
+    <Position X="3.75" Y="0.5" Width="1.75" />
     <Members>
       <Method Name="~Cannon" Hidden="true" />
       <Field Name="barrelLength" Hidden="true" />
@@ -83,7 +83,7 @@
       <Field Name="power" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAIAAAAAECAAwAAAAUAAFAAAgCEEAQAhAEAAEAAQAAE=</HashCode>
+      <HashCode>ABIAAAAAECAAwAAAAUAAFAAAgCEEAQAhAEAAEAAQAAA=</HashCode>
       <FileName>Cannon.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

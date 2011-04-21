@@ -156,7 +156,11 @@ namespace OrbitClash
             this.particleSystem.Add(this.planet);
 
             // Draw the planetary halo onto the background.
-            this.planet.DrawHalo(this.background);
+            if (Configuration.Planet.ShowPlanetaryHalo)
+            {
+                Point haloPosition = new Point(this.planet.Center.X - Configuration.Planet.GravityWellRadius, this.planet.Center.Y - Configuration.Planet.GravityWellRadius);
+                this.background.Blit(this.planet.HaloSurface, haloPosition);
+            }
 
             // Setup the gravity manipulator.
             this.gravityManipulator = new GravityWell(this.planet.Center, Configuration.Planet.GravityWellRadius, Configuration.Planet.GravityPower);

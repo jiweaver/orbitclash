@@ -45,20 +45,17 @@ namespace OrbitClash
     {
         #region Fields
 
-        private ParticleSystem particleSystem;
-
         private Surface haloSurface;
-        private Point haloPosition;
 
         #endregion Fields
 
         #region Properties
 
-        public ParticleSystem ParticleSystem
+        public Surface HaloSurface
         {
             get
             {
-                return this.particleSystem;
+                return haloSurface;
             }
         }
 
@@ -85,9 +82,8 @@ namespace OrbitClash
 
             if (Configuration.Planet.ShowPlanetaryHalo)
             {
-                // Show the planetary "halo."
+                // Prepare the planetary "halo" surface.
                 Circle circle = new Circle(Configuration.Planet.GravityWellRadius, Configuration.Planet.GravityWellRadius, Configuration.Planet.GravityWellRadius);
-                this.haloPosition = new Point(position.X - Configuration.Planet.GravityWellRadius, position.Y - Configuration.Planet.GravityWellRadius);
 
                 this.haloSurface = new Surface(Configuration.Planet.GravityWellRadius * 2, Configuration.Planet.GravityWellRadius * 2);
                 this.haloSurface.Alpha = Configuration.Planet.PlanetaryHaloAlpha;
@@ -98,12 +94,10 @@ namespace OrbitClash
                 // Convert it for display.
                 this.haloSurface = this.haloSurface.Convert(Video.Screen, true, false);
             }
-
-            // Create a new particle system.
-            this.particleSystem = new ParticleSystem();
-
-            // Add ourselves to the particle system.
-            this.particleSystem.Add(this);
+            else
+            {
+                this.haloSurface = null;
+            }
         }
 
         private static Sprite GetPlanetSprite(string imageFilename, Color bitmap_TransparentColor, float scale)
@@ -127,22 +121,6 @@ namespace OrbitClash
         }
 
         #endregion Constructor
-
-        #region Operations
-
-        public void DrawHalo(Surface surface)
-        {
-            if (Configuration.Planet.ShowPlanetaryHalo)
-                // Show the planetary "halo."
-                surface.Blit(this.haloSurface, this.haloPosition);
-        }
-
-        public GravityWell GetGravityManipulator()
-        {
-            return new GravityWell(this.Center, Configuration.Planet.GravityWellRadius, Configuration.Planet.GravityPower);
-        }
-
-        #endregion Operations
 
         #region IDisposable
 
