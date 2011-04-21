@@ -122,7 +122,26 @@ namespace OrbitClash
         {
             get
             {
-                return Configuration.MaxLiveBulletsPerCannon - this.GetLiveBulletCount();
+                return Configuration.MaxLiveBulletsPerCannon - this.LiveBulletCount;
+            }
+        }
+
+        // Updates the live bullet list and returns the count of live bullets.
+        public int LiveBulletCount
+        {
+            get
+            {
+                // Prune the list of dead bullets.
+                ParticleCollection particles = this.bulletCollection;
+                for (int i = 0; i < particles.Count; i++)
+                {
+                    BaseParticle particle = particles[i];
+                    if (particle.Life == 0)
+                        particles.RemoveAt(i);
+                }
+
+                // Return the size of the cleaned list.
+                return particles.Count;
             }
         }
 
@@ -163,7 +182,7 @@ namespace OrbitClash
             int gunDirectionDeg = this.owner.SpriteSheet.CurrentDirectionDeg;
             Point shipCenterPos = sprite.Center;
 
-            if (this.GetLiveBulletCount() >= Configuration.MaxLiveBulletsPerCannon)
+            if (this.LiveBulletCount >= Configuration.MaxLiveBulletsPerCannon)
             {
                 // Too many bullets currently active for this cannon.
 
@@ -209,20 +228,6 @@ namespace OrbitClash
             }
 
             return cannonBullet;
-        }
-
-        // Updates the live bullet list and returns the count of live bullets.
-        public int GetLiveBulletCount()
-        {
-            ParticleCollection particles = this.bulletCollection;
-            for (int i = 0; i < particles.Count; i++)
-            {
-                BaseParticle particle = particles[i];
-                if (particle.Life == 0)
-                    particles.RemoveAt(i);
-            }
-
-            return particles.Count;
         }
 
         #endregion Public Operations

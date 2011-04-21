@@ -7,12 +7,15 @@
       <Field Name="animatedSprite" Hidden="true" />
       <Field Name="bitmap" Hidden="true" />
       <Field Name="cannonBarrelLength" Hidden="true" />
+      <Property Name="CannonBarrelLength" Hidden="true" />
       <Method Name="Dispose" Hidden="true" />
       <Field Name="disposed" Hidden="true" />
       <Field Name="firstFrameShipDirectionDeg" Hidden="true" />
       <Field Name="forwardThrusterEngineLength" Hidden="true" />
+      <Property Name="ForwardThrusterEngineLength" Hidden="true" />
       <Field Name="frameSize" Hidden="true" />
       <Field Name="reverseThrusterEngineLength" Hidden="true" />
+      <Property Name="ReverseThrusterEngineLength" Hidden="true" />
       <Field Name="rotationPerFrameDeg" Hidden="true" />
       <Field Name="transparentColor" Hidden="true" />
     </Members>
