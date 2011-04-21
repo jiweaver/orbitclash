@@ -160,7 +160,7 @@ namespace OrbitClash
             Vector shipVector = this.owner.Velocity;
 
             Sprite sprite = this.owner.Sprite;
-            int gunDirectionDeg = this.owner.SpriteSheet.GetDirectionDeg(sprite) % 360;
+            int gunDirectionDeg = this.owner.SpriteSheet.CurrentDirectionDeg;
             Point shipCenterPos = sprite.Center;
 
             if (this.GetLiveBulletCount() >= Configuration.MaxLiveBulletsPerCannon)

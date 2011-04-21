@@ -33,6 +33,7 @@
 
 using System;
 using System.Drawing;
+using SdlDotNet.Graphics;
 using SdlDotNet.Graphics.Sprites;
 
 namespace OrbitClash
@@ -47,9 +48,27 @@ namespace OrbitClash
         private int rotationPerFrameDeg;
         private Color transparentColor;
 
+        private AnimatedSprite animatedSprite;
+        private int forwardThrusterEngineLength;
+        private int reverseThrusterEngineLength;
+
+        private int cannonBarrelLength;
+
         #endregion Fields
 
         #region Properties
+
+        public AnimatedSprite AnimatedSprite
+        {
+            get
+            {
+                return this.animatedSprite;
+            }
+            set
+            {
+                this.animatedSprite = value;
+            }
+        }
 
         public Color TransparentColor
         {
@@ -111,32 +130,84 @@ namespace OrbitClash
             }
         }
 
+        public int ForwardThrusterEngineLength
+        {
+            get
+            {
+                return this.forwardThrusterEngineLength;
+            }
+            set
+            {
+                this.forwardThrusterEngineLength = value;
+            }
+        }
+
+        public int ReverseThrusterEngineLength
+        {
+            get
+            {
+                return this.reverseThrusterEngineLength;
+            }
+            set
+            {
+                this.reverseThrusterEngineLength = value;
+            }
+        }
+
+        public int CannonBarrelLength
+        {
+            get
+            {
+                return this.cannonBarrelLength;
+            }
+            set
+            {
+                this.cannonBarrelLength = value;
+            }
+        }
+
+        // Returns current degree of rotation.
+        public int CurrentDirectionDeg
+        {
+            get
+            {
+                return (this.firstFrameShipDirectionDeg + (this.animatedSprite.Frame * this.rotationPerFrameDeg)) % 360;
+            }
+        }
+
         #endregion Properties
 
         #region Constructors
 
-        public SpriteSheet(string spriteSheetFilename, Color transparentColor, Size frameSize, int rotationPerFrameDeg, int firstFrameShipDirectionDeg)
+        public SpriteSheet(string spriteSheetFilename, Color transparentColor, Size frameSize, int rotationPerFrameDeg, int firstFrameShipDirectionDeg, int rotationAnimationDelay, int cannonBarrelLength, int forwardThrusterEngineLength, int reverseThrusterEngineLength)
         {
             this.bitmap = new Bitmap(spriteSheetFilename);
             this.transparentColor = transparentColor;
             this.frameSize = frameSize;
             this.rotationPerFrameDeg = rotationPerFrameDeg;
             this.firstFrameShipDirectionDeg = firstFrameShipDirectionDeg;
+            this.cannonBarrelLength = cannonBarrelLength;
+            this.reverseThrusterEngineLength = reverseThrusterEngineLength;
+            this.forwardThrusterEngineLength = forwardThrusterEngineLength;
+
+            SurfaceCollection spriteSheet_SurfaceCollection = new SurfaceCollection();
+            Surface spriteSheet_Surface = new Surface(this.bitmap).Convert(Video.Screen, true, false);
+
+            spriteSheet_SurfaceCollection.Add(spriteSheet_Surface, this.frameSize);
+
+            AnimationCollection animationCollection = new AnimationCollection();
+            animationCollection.Add(spriteSheet_SurfaceCollection);
+            animationCollection.Delay = rotationAnimationDelay;
+
+            AnimatedSprite animatedSprite = new AnimatedSprite(animationCollection);
+
+            animatedSprite.TransparentColor = this.transparentColor;
+            animatedSprite.Transparent = true;
+
+            this.animatedSprite = animatedSprite;
         }
 
         #endregion Constructors
-
-        #region Operations
-
-        // Returns current degree of rotation.
-        public int GetDirectionDeg(Sprite sprite)
-        {
-            AnimatedSprite animatedSprite = sprite as AnimatedSprite;
-
-            return (this.firstFrameShipDirectionDeg + (animatedSprite.Frame * this.rotationPerFrameDeg)) % 360;
-        }
-
-        #endregion Operations
 
         #region IDisposable
 

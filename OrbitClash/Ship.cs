@@ -47,9 +47,6 @@ namespace OrbitClash
         // The ship rotation sprite sheet.
         private SpriteSheet spriteSheet;
 
-        // The ship is an animated sprite (for rotations).
-        private AnimatedSprite animatedSprite;
-
         // The forward and reverse thrusters.
         private Thruster forwardThruster;
         private Thruster reverseThruster;
@@ -162,7 +159,9 @@ namespace OrbitClash
         /// <summary>
         /// Creates a new Ship instance.
         /// </summary>
-        /// <param name="player">The player who owns the ship.</param>
+        /// <param name="player">
+        /// The player who owns the ship.
+        /// </param>
         /// <param name="spriteSheet">
         /// The Ship's rotational sprite sheet.
         /// </param>
@@ -172,31 +171,15 @@ namespace OrbitClash
         /// <param name="bulletSurface">
         /// The surface for bullets fired by this ship.
         /// </param>
-        /// <param name="cannonBarrelLength">
-        /// The length (in pixels; from the pivot point) of the Ship's cannon
-        /// barrel.  This determines where bullets will emerge from.
-        /// </param>
-        /// <param name="forwardThrusterEngineLength">
-        /// The length (in pixels; from the pivot point) of the Ship's forward
-        /// facing engine tube.  This determines where the exhaust cone will
-        /// begin.
-        /// </param>
-        /// <param name="reverseThrusterEngineLength">
-        /// The length (in pixels; from the pivot point) of the Ship's reverse
-        /// facing engine tube.  This determines where the exhaust cone will
-        /// begin.
-        /// </param>
-        /// <param name="rotationAnimationDelay">
-        /// The delay between frames of the Ship's sprite sheet animation.
-        /// </param>
         /// <param name="infoBarShipSurface">
         /// The surface that is displayed as the identifying icon in the
         /// InfoBar.
         /// </param>
-        public Ship(Player player, SpriteSheet spriteSheet, Point startingScreenPosition, Surface bulletSurface, int cannonBarrelLength, int forwardThrusterEngineLength, int reverseThrusterEngineLength, double rotationAnimationDelay, Surface infoBarShipSurface)
-            : base(GetAnimatedSprite(spriteSheet, rotationAnimationDelay))
+        public Ship(Player player, SpriteSheet spriteSheet, Point startingScreenPosition, Surface bulletSurface, Surface infoBarShipSurface)
+            : base(spriteSheet.AnimatedSprite)
         {
             this.player = player;
+            this.spriteSheet = spriteSheet;
 
             // This is for the ship picture in the InfoBar.
             this.shipPhotoSurface = infoBarShipSurface;
@@ -212,37 +195,15 @@ namespace OrbitClash
             // Our next scheduled respawn time (i.e. never).
             this.respawnTime = DateTime.MinValue;
 
-            this.spriteSheet = spriteSheet;
-            this.animatedSprite = (AnimatedSprite)this.Sprite;
-
             this.speedLimiter = new SpeedLimit(this.topSpeed);
 
-            this.forwardThruster = new Thruster(this, false, Configuration.Ships.Thrusters.Forward.SoundFilename, Configuration.Ships.Thrusters.Forward.Power, forwardThrusterEngineLength, Configuration.Ships.Thrusters.Forward.ExhaustConeDeg, Configuration.Ships.Thrusters.Forward.ParticleMinColor, Configuration.Ships.Thrusters.Forward.ParticleMaxColor);
+            this.forwardThruster = new Thruster(this, false, Configuration.Ships.Thrusters.Forward.SoundFilename, Configuration.Ships.Thrusters.Forward.Power, spriteSheet.ForwardThrusterEngineLength, Configuration.Ships.Thrusters.Forward.ExhaustConeDeg, Configuration.Ships.Thrusters.Forward.ParticleMinColor, Configuration.Ships.Thrusters.Forward.ParticleMaxColor);
 
-            this.reverseThruster = new Thruster(this, true, Configuration.Ships.Thrusters.Reverse.SoundFilename, Configuration.Ships.Thrusters.Reverse.Power, reverseThrusterEngineLength, Configuration.Ships.Thrusters.Reverse.ExhaustConeDeg, Configuration.Ships.Thrusters.Reverse.ParticleMinColor, Configuration.Ships.Thrusters.Reverse.ParticleMaxColor);
+            this.reverseThruster = new Thruster(this, true, Configuration.Ships.Thrusters.Reverse.SoundFilename, Configuration.Ships.Thrusters.Reverse.Power, spriteSheet.ReverseThrusterEngineLength, Configuration.Ships.Thrusters.Reverse.ExhaustConeDeg, Configuration.Ships.Thrusters.Reverse.ParticleMinColor, Configuration.Ships.Thrusters.Reverse.ParticleMaxColor);
 
-            this.cannon = new Cannon(this, cannonBarrelLength, bulletSurface, Configuration.Ships.Cannon.Power, Configuration.Ships.Cannon.Cooldown, Configuration.Ships.Cannon.MuzzleSpeed, Configuration.Bullets.Life);
+            this.cannon = new Cannon(this, spriteSheet.CannonBarrelLength, bulletSurface, Configuration.Ships.Cannon.Power, Configuration.Ships.Cannon.Cooldown, Configuration.Ships.Cannon.MuzzleSpeed, Configuration.Bullets.Life);
 
             this.spawnTime = DateTime.Now;
-        }
-
-        private static AnimatedSprite GetAnimatedSprite(SpriteSheet spriteSheet, double rotationAnimationDelay)
-        {
-            SurfaceCollection spriteSheet_SurfaceCollection = new SurfaceCollection();
-            Surface spriteSheet_Surface = new Surface(spriteSheet.Bitmap).Convert(Video.Screen, true, false);
-
-            spriteSheet_SurfaceCollection.Add(spriteSheet_Surface, spriteSheet.FrameSize);
-
-            AnimationCollection animationCollection = new AnimationCollection();
-            animationCollection.Add(spriteSheet_SurfaceCollection);
-            animationCollection.Delay = rotationAnimationDelay;
-
-            AnimatedSprite animatedSprite = new AnimatedSprite(animationCollection);
-
-            animatedSprite.TransparentColor = spriteSheet.TransparentColor;
-            animatedSprite.Transparent = true;
-
-            return animatedSprite;
         }
 
         #endregion Constructors
@@ -308,19 +269,19 @@ namespace OrbitClash
 
         public void BeginRotateRight()
         {
-            this.animatedSprite.AnimateForward = true;
-            this.animatedSprite.Animate = true;
+            this.spriteSheet.AnimatedSprite.AnimateForward = true;
+            this.spriteSheet.AnimatedSprite.Animate = true;
         }
 
         public void BeginRotateLeft()
         {
-            this.animatedSprite.AnimateForward = false;
-            this.animatedSprite.Animate = true;
+            this.spriteSheet.AnimatedSprite.AnimateForward = false;
+            this.spriteSheet.AnimatedSprite.Animate = true;
         }
 
         public void EndRotate()
         {
-            this.animatedSprite.Animate = false;
+            this.spriteSheet.AnimatedSprite.Animate = false;
         }
 
         #endregion Rotation
@@ -398,12 +359,6 @@ namespace OrbitClash
                     {
                         this.reverseThruster.Dispose();
                         this.reverseThruster = null;
-                    }
-
-                    if (this.animatedSprite != null)
-                    {
-                        this.animatedSprite.Dispose();
-                        this.animatedSprite = null;
                     }
                 }
 
