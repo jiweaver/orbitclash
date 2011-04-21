@@ -40,6 +40,7 @@
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <DocumentationFile>bin\Debug\OrbitClash.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -52,8 +53,7 @@
     <DocumentationFile>bin\Release\OrbitClash.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>OrbitClash.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\App.ico</ApplicationIcon>
@@ -108,6 +108,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Class Diagrams\Manipulators.cd" />
+    <None Include="Class Diagrams\Player.cd" />
     <None Include="Class Diagrams\SpriteSheet.cd" />
     <None Include="Class Diagrams\Ship.cd" />
     <None Include="Class Diagrams\SolidEntity.cd" />

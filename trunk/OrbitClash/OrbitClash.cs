@@ -300,40 +300,29 @@ namespace OrbitClash
             Color bulletImageTransparentColor;
             string infoBarShipImageFilename;
             Color infoBarShipImageTransparentColor;
-            int cannonBarrelLength;
-            int forwardThrusterEngineLength;
-            int reverseThrusterEngineLength;
-            int rotationAnimationDelay;
             Point scoreCardDisplayPosition;
             if (number == 1)
             {
                 player = this.player1;
-                spriteSheet = Configuration.Ships.Model1.SpriteSheet;
                 bulletImageFilename = Configuration.Ships.Model1.BulletImageFilename;
                 bulletImageScale = Configuration.Ships.Model1.BulletImageScale;
                 bulletImageTransparentColor = Configuration.Ships.Model1.BulletImageTransparentColor;
                 infoBarShipImageFilename = Configuration.Ships.Model1.InfoBarShipImageFilename;
                 infoBarShipImageTransparentColor = Configuration.Ships.Model1.InfoBarShipImageTransparentColor;
-                cannonBarrelLength = Configuration.Ships.Model1.CannonBarrelLength;
-                forwardThrusterEngineLength = Configuration.Ships.Model1.ForwardThrusterEngineLength;
-                reverseThrusterEngineLength = Configuration.Ships.Model1.ReverseThrusterEngineLength;
-                rotationAnimationDelay = Configuration.Ships.Model1.RotationAnimationDelay;
                 scoreCardDisplayPosition = new Point(Configuration.InfoBarPosition.X + Configuration.InfoBar.Player1ScoreCardDisplayPosition.X, Configuration.InfoBarPosition.Y + Configuration.InfoBar.Player1ScoreCardDisplayPosition.Y);
+                spriteSheet = new SpriteSheet(Configuration.Ships.Model1.SpriteSheet.Filename, Configuration.Ships.Model1.SpriteSheet.TransparentColor, Configuration.Ships.Model1.SpriteSheet.Size, Configuration.Ships.Model1.SpriteSheet.RotationDegreesPerFrame, Configuration.Ships.Model1.SpriteSheet.FirstFrameDirectionDegrees, Configuration.Ships.Model1.SpriteSheet.RotationAnimationDelay, Configuration.Ships.Model1.SpriteSheet.CannonBarrelLength, Configuration.Ships.Model1.SpriteSheet.ForwardThrusterEngineLength, Configuration.Ships.Model1.SpriteSheet.ReverseThrusterEngineLength);
             }
             else
             {
                 player = this.player2;
-                spriteSheet = Configuration.Ships.Model2.SpriteSheet;
                 bulletImageFilename = Configuration.Ships.Model2.BulletImageFilename;
                 bulletImageScale = Configuration.Ships.Model2.BulletImageScale;
                 bulletImageTransparentColor = Configuration.Ships.Model2.BulletImageTransparentColor;
                 infoBarShipImageFilename = Configuration.Ships.Model2.InfoBarShipImageFilename;
                 infoBarShipImageTransparentColor = Configuration.Ships.Model2.InfoBarShipImageTransparentColor;
-                cannonBarrelLength = Configuration.Ships.Model2.CannonBarrelLength;
-                forwardThrusterEngineLength = Configuration.Ships.Model2.ForwardThrusterEngineLength;
-                reverseThrusterEngineLength = Configuration.Ships.Model2.ReverseThrusterEngineLength;
-                rotationAnimationDelay = Configuration.Ships.Model2.RotationAnimationDelay;
                 scoreCardDisplayPosition = new Point(Configuration.InfoBarPosition.X + Configuration.InfoBar.Player2ScoreCardDisplayPosition.X, Configuration.InfoBarPosition.Y + Configuration.InfoBar.Player2ScoreCardDisplayPosition.Y);
+
+                spriteSheet = new SpriteSheet(Configuration.Ships.Model2.SpriteSheet.Filename, Configuration.Ships.Model2.SpriteSheet.TransparentColor, Configuration.Ships.Model2.SpriteSheet.Size, Configuration.Ships.Model2.SpriteSheet.RotationDegreesPerFrame, Configuration.Ships.Model2.SpriteSheet.FirstFrameDirectionDegrees, Configuration.Ships.Model2.SpriteSheet.RotationAnimationDelay, Configuration.Ships.Model2.SpriteSheet.CannonBarrelLength, Configuration.Ships.Model2.SpriteSheet.ForwardThrusterEngineLength, Configuration.Ships.Model2.SpriteSheet.ReverseThrusterEngineLength);
             }
 
             Point spawnPosition = GetSafeSpawnPosition(player.Ship);
@@ -355,7 +344,7 @@ namespace OrbitClash
             if (player.Ship != null)
                 player.Ship.Dispose();
 
-            player.Ship = new Ship(player, spriteSheet, spawnPosition, bulletSurface, cannonBarrelLength, forwardThrusterEngineLength, reverseThrusterEngineLength, rotationAnimationDelay, infoBarShipSurface);
+            player.Ship = new Ship(player, spriteSheet, spawnPosition, bulletSurface, infoBarShipSurface);
 
             if (player.ScoreCard == null)
                 player.ScoreCard = new ScoreCard(player, scoreCardDisplayPosition);

@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Comment CommentText="The main class creates and maintains the game world, catches events, and handles the game logic.">
-    <Position X="4.9" Y="4.497" Height="0.845" Width="1.7" />
-  </Comment>
   <Class Name="OrbitClash.OrbitClash">
     <Position X="0.5" Y="0.5" Width="4" />
     <Members>
@@ -12,6 +9,7 @@
       <Field Name="bulletShipImpactBounceSound" Hidden="true" />
       <Field Name="bulletShipImpactSound" Hidden="true" />
       <Method Name="DamageShip" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
       <Field Name="disposed" Hidden="true" />
       <Method Name="Distance" Hidden="true" />
       <Method Name="EnforceCollisions" Hidden="true" />
@@ -24,66 +22,48 @@
     </Members>
     <AssociationLine Name="player1" Type="OrbitClash.Player" FixedFromPoint="true">
       <Path>
-        <Point X="3.188" Y="4.238" />
-        <Point X="3.188" Y="5" />
+        <Point X="4.312" Y="4.238" />
+        <Point X="4.312" Y="5.75" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="player2" Type="OrbitClash.Player" FixedFromPoint="true">
       <Path>
-        <Point X="4.312" Y="4.238" />
-        <Point X="4.312" Y="5" />
+        <Point X="3.312" Y="4.238" />
+        <Point X="3.312" Y="5.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="planet" Type="OrbitClash.Planet" FixedFromPoint="true">
+      <Path>
+        <Point X="2.312" Y="4.238" />
+        <Point X="2.312" Y="4.75" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>xAIAAQAAACAgAEBgAAAIEAKCEAQKAgBAAAAACAiAYYQ=</HashCode>
+      <HashCode>xAIAAQAAACAgAEBgAAAIEAKCEAQKAgBAAAAACAgAYYQ=</HashCode>
       <FileName>OrbitClash.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="mainTitle" />
       <Field Name="player1" />
       <Field Name="player2" />
       <Field Name="planet" />
-      <Field Name="speedLimitManipulator" />
-      <Field Name="gravityManipulator" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="OrbitClash.SpeedLimit" Collapsed="true">
-    <Position X="6.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAACAAAA=</HashCode>
-      <FileName>SpeedLimit.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="OrbitClash.MainTitle" Collapsed="true">
-    <Position X="5.75" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAIEAABAAAAEAAAAgAAAAAAAAAAAAAIAAAABAAA=</HashCode>
-      <FileName>MainTitle.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="OrbitClash.GravityWell" Collapsed="true">
-    <Position X="6.25" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAIAAAACAAAAAAgAAAAIAAAAAEAAAABAAAAAgCAAAA=</HashCode>
-      <FileName>GravityWell.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="OrbitClash.Player" Collapsed="true">
-    <Position X="2.75" Y="5" Width="2" />
+    <Position X="1" Y="5.75" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AoQAoCAAAAAmQAAABkAioECAIoTAgQAAoAEACCCAAAA=</HashCode>
+      <HashCode>AoIAoCAAgDAmQAAABkAioECAIoDAgQAAoAEIACCAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="OrbitClash.Planet" Collapsed="true">
-    <Position X="0.5" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="4.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAQAAAQAAAAAAAAAKAAAACAAAAAAAAAIAAAAA=</HashCode>
+      <HashCode>AAIAAAAAQCAAQAAAAAAAAAKAAAACAAAAAAAAAIAAAAA=</HashCode>
       <FileName>Planet.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -142,7 +142,7 @@ namespace OrbitClash
                 // Dead entities don't collide, because they don't exist.
                 return false;
 
-            bool collisionStatus = SolidEntity.Collision(this, otherSolidEntity);
+            bool collisionStatus = SolidEntity.CheckCollision(this, otherSolidEntity);
             bool alreadyCollided = this.currentCollisions.Contains(otherSolidEntity);
 
             if (!collisionStatus)
@@ -197,7 +197,7 @@ namespace OrbitClash
         /* Returns true if the two specified entities are colliding.  This
          * method has pixel-level accuracy.
          */
-        private static bool Collision(SolidEntity entity1, SolidEntity entity2)
+        private static bool CheckCollision(SolidEntity entity1, SolidEntity entity2)
         {
             /* Immediately grab a reference to each particle sprite image
              * (Surface), so that any sprite animation will not trip us up by

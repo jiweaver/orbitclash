@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Comment CommentText="This class holds all the relevant information about a live cannon bullet particle.">
-    <Position X="7.578" Y="0.5" Height="0.845" Width="1.431" />
-  </Comment>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="OrbitClash.Bullet">
-    <Position X="0.5" Y="0.5" Width="6.75" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <Members>
       <Method Name="GetBulletSprite" Hidden="true" />
       <Field Name="owner" Hidden="true" />

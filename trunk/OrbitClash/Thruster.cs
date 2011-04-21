@@ -139,7 +139,7 @@ namespace OrbitClash
 
         public void FireThruster()
         {
-            int shipDirectionDeg = this.owner.SpriteSheet.GetDirectionDeg(this.owner.Sprite) % 360;
+            int shipDirectionDeg = this.owner.SpriteSheet.CurrentDirectionDeg;
 
             int thrustDirectionDeg;
             int forceDirectionDeg;

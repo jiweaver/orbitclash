@@ -338,21 +338,25 @@ namespace OrbitClash
             public static class Model1
             {
                 public static string InfoBarShipImageFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Images\Ship1.png");
+                public static Color InfoBarShipImageTransparentColor = Color.FromArgb(255, 0, 0, 0);
 
-                public static string SpriteSheetFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Images\Ship1 Sprite Sheet.png");
+                public static class SpriteSheet
+                {
+                    public static string Filename = Path.Combine(Directory.GetCurrentDirectory(), @"Images\Ship1 Sprite Sheet.png");
 
-                public static SpriteSheet SpriteSheet = new SpriteSheet(SpriteSheetFilename, Color.FromArgb(255, 0, 0, 0), new Size(28, 28), 10, 270);
-
-                public const int RotationAnimationDelay = 50;
-
-                public const int CannonBarrelLength = 17;
-                public const int ForwardThrusterEngineLength = 11;
-                public const int ReverseThrusterEngineLength = 11;
+                    public static Color TransparentColor = Color.FromArgb(255, 0, 0, 0);
+                    public const int RotationDegreesPerFrame = 10;
+                    public const int FirstFrameDirectionDegrees = 270;
+                    public const int RotationAnimationDelay = 50;
+                    public static Size Size = new Size(28, 28);
+                    public const int CannonBarrelLength = 17;
+                    public const int ForwardThrusterEngineLength = 11;
+                    public const int ReverseThrusterEngineLength = 11;
+                }
 
                 public static string BulletImageFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Images\Bullet1.png");
                 public static Color BulletImageTransparentColor = Color.FromArgb(255, 0, 0, 0);
                 public static double BulletImageScale = 0.25d;
-                public static Color InfoBarShipImageTransparentColor = Color.FromArgb(255, 0, 0, 0);
             }
 
             #endregion Model1
@@ -362,21 +366,25 @@ namespace OrbitClash
             public static class Model2
             {
                 public static string InfoBarShipImageFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Images\Ship2.png");
+                public static Color InfoBarShipImageTransparentColor = Color.FromArgb(255, 0, 0, 0);
 
-                public static string SpriteSheetFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Images\Ship2 Sprite Sheet.png");
+                public static class SpriteSheet
+                {
+                    public static string Filename = Path.Combine(Directory.GetCurrentDirectory(), @"Images\Ship2 Sprite Sheet.png");
 
-                public static SpriteSheet SpriteSheet = new SpriteSheet(SpriteSheetFilename, Color.FromArgb(255, 0, 0, 0), new Size(26, 26), 10, 270);
-
-                public const int RotationAnimationDelay = 50;
-
-                public const int CannonBarrelLength = 17;
-                public const int ForwardThrusterEngineLength = 11;
-                public const int ReverseThrusterEngineLength = 11;
+                    public static Color TransparentColor = Color.FromArgb(255, 0, 0, 0);
+                    public const int RotationDegreesPerFrame = 10;
+                    public const int FirstFrameDirectionDegrees = 270;
+                    public const int RotationAnimationDelay = 50;
+                    public static Size Size = new Size(26, 26);
+                    public const int CannonBarrelLength = 17;
+                    public const int ForwardThrusterEngineLength = 11;
+                    public const int ReverseThrusterEngineLength = 11;
+                }
 
                 public static string BulletImageFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Images\Bullet2.png");
                 public static Color BulletImageTransparentColor = Color.FromArgb(255, 0, 0, 0);
                 public static double BulletImageScale = 0.25d;
-                public static Color InfoBarShipImageTransparentColor = Color.FromArgb(255, 0, 0, 0);
             }
 
             #endregion Model2
