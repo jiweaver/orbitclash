@@ -180,17 +180,17 @@
     <SdlDotNetContent Include="Resources\SdlDotNet\SdlDotNet-Version.txt" />
   </ItemGroup>
   <ItemGroup>
-    <SoundContent Include="Resources\Sounds\Bounce.wav" />
-    <SoundContent Include="Resources\Sounds\BulletPlanetImpact.wav" />
-    <SoundContent Include="Resources\Sounds\BulletShipImpact.wav" />
-    <SoundContent Include="Resources\Sounds\CannonFire.wav" />
-    <SoundContent Include="Resources\Sounds\DryFire.wav" />
-    <SoundContent Include="Resources\Sounds\ShipExplosion.wav" />
-    <SoundContent Include="Resources\Sounds\ShipForwardThrusters.wav" />
-    <SoundContent Include="Resources\Sounds\ShipReverseThrusters.wav" />
-    <SoundContent Include="Resources\Sounds\ShipShipImpact.wav" />
+    <SoundContent Include="Resources\Sounds\Bounce.ogg" />
+    <SoundContent Include="Resources\Sounds\BulletPlanetImpact.ogg" />
+    <SoundContent Include="Resources\Sounds\BulletShipImpact.ogg" />
+    <SoundContent Include="Resources\Sounds\CannonFire.ogg" />
+    <SoundContent Include="Resources\Sounds\DryFire.ogg" />
+    <SoundContent Include="Resources\Sounds\ShipExplosion.ogg" />
+    <SoundContent Include="Resources\Sounds\ShipForwardThrusters.ogg" />
+    <SoundContent Include="Resources\Sounds\ShipReverseThrusters.ogg" />
+    <SoundContent Include="Resources\Sounds\ShipShipImpact.ogg" />
     <SoundContent Include="Resources\Sounds\Sound Attribution.txt" />
-    <SoundContent Include="Resources\Sounds\Warp.wav" />
+    <SoundContent Include="Resources\Sounds\Warp.ogg" />
   </ItemGroup>
   <ItemGroup>
     <AvailableItemName Include="Font_Orbitron_Content">

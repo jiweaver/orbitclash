@@ -4,47 +4,47 @@ Sound Attribution
 File List
 -------------------------------------------------------------------------------
 
-Filename: ShipShipImpact.wav
+Filename: ShipShipImpact.ogg
 http://soundbible.com/996-Kick.html
 License: Creative Commons Attribution 3.0
 Recorded by Mike Koenig
 
-Filename: Dryfire.wav
+Filename: Dryfire.ogg
 http://soundbible.com/1405-Dry-Fire-Gun.html
 License: Creative Commons Attribution 3.0
 Recorded by Mike Koenig
 
-Filename: BulletShipImpact.wav
+Filename: BulletShipImpact.ogg
 http://soundbible.com/995-Jab.html
 License: Creative Commons Attribution 3.0
 Recorded by Mike Koenig
 
-Filename: ShipExplosion.wav
+Filename: ShipExplosion.ogg
 http://soundbible.com/1467-Grenade-Explosion.html
 License: Creative Commons Attribution 3.0
 Recorded by Mike Koenig
 
-Filename: CannonFire.wav
+Filename: CannonFire.ogg
 http://soundbible.com/930-Gun-Silencer.html
 License: Creative Commons Attribution 3.0
 Recorded by Mike Koenig
 
-Filename: Warp.wav
+Filename: Warp.ogg
 http://soundbible.com/1343-Jump.html
 License: Creative Commons Attribution 3.0
 Recorded by snottyboy
 
-Filename: Bounce.wav
+Filename: Bounce.ogg
 http://soundbible.com/1120-Bounce.html
 License: Creative Commons Attribution 3.0
 Recorded by Mike Koenig
 
-Filename: BulletPlanetImpact.wav
+Filename: BulletPlanetImpact.ogg
 http://soundbible.com/1005-Frying-Pan-Impact.html
 License: Creative Commons Attribution 3.0
 Recorded by Mike Koenig
 
-Filename: ShipForwardThruster.wav, ShipReverseThruster.wav
+Filename: ShipForwardThruster.ogg, ShipReverseThruster.ogg
 http://soundbible.com/1492-Rocket-Thrusters.html
 License: Creative Commons Sampling Plus 1.0
 Recorded by dobroride
