@@ -187,7 +187,7 @@ namespace OrbitClash
              */
             public const float ShipShipCollisionDamage = 1;
 
-            public static string ShipShipImpactSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\ShipShipImpact.wav");
+            public static string ShipShipImpactSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\ShipShipImpact.ogg");
 
             #region Spawning
 
@@ -198,7 +198,7 @@ namespace OrbitClash
 
             public static class Creation
             {
-                public static string SoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\Warp.wav");
+                public static string SoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\Warp.ogg");
                 // The life of the explosion.
                 public const int Life = 10;
                 // Particles per 1000 updates.
@@ -241,7 +241,7 @@ namespace OrbitClash
 
             public static class Cannon
             {
-                public static string FiringSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\CannonFire.wav");
+                public static string FiringSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\CannonFire.ogg");
                 public const float Power = 1f;
                 public static TimeSpan Cooldown = new TimeSpan(0, 0, 0, 0, 150);
                 public const float MuzzleSpeed = 3f;
@@ -249,7 +249,7 @@ namespace OrbitClash
                 public static Color InfoDisplayWeakBulletCountColor = Color.Orange;
                 public static Color InfoDisplayCriticalBulletCountColor = Color.Red;
 
-                public static string DryFireSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\DryFire.wav");
+                public static string DryFireSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\DryFire.ogg");
             }
 
             #endregion Cannon
@@ -271,7 +271,7 @@ namespace OrbitClash
 
                 public static class Forward
                 {
-                    public static string SoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\ShipForwardThrusters.wav");
+                    public static string SoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\ShipForwardThrusters.ogg");
 
                     public const int ExhaustConeDeg = 30;
 
@@ -287,7 +287,7 @@ namespace OrbitClash
 
                 public static class Reverse
                 {
-                    public static string SoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\ShipReverseThrusters.wav");
+                    public static string SoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\ShipReverseThrusters.ogg");
 
                     public const int ExhaustConeDeg = 60;
 
@@ -307,7 +307,7 @@ namespace OrbitClash
             public static class Explosion
             {
                 // Death Explosion,
-                public static string SoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\ShipExplosion.wav");
+                public static string SoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\ShipExplosion.ogg");
                 // The life of the explosion.
                 public const int Life = 13;
                 // Particles per 1000 updates.
@@ -398,9 +398,9 @@ namespace OrbitClash
 
         public static class Bullets
         {
-            public static string BulletShipImpactBounceSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\Bounce.wav");
-            public static string BulletShipImpactSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\BulletShipImpact.wav");
-            public static string BulletPlanetImpactSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\BulletPlanetImpact.wav");
+            public static string BulletShipImpactBounceSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\Bounce.ogg");
+            public static string BulletShipImpactSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\BulletShipImpact.ogg");
+            public static string BulletPlanetImpactSoundFilename = Path.Combine(Directory.GetCurrentDirectory(), @"Sounds\BulletPlanetImpact.ogg");
 
             public const int Life = 160;
         }

@@ -68,34 +68,6 @@ namespace OrbitClash
 
         #region Properties
 
-        public Player Player
-        {
-            get
-            {
-                return this.player;
-            }
-        }
-
-        public Surface Surface
-        {
-            get
-            {
-                return this.scoreCard;
-            }
-        }
-
-        public Point DisplayPosition
-        {
-            get
-            {
-                return this.displayPosition;
-            }
-            set
-            {
-                this.displayPosition = value;
-            }
-        }
-
         public int Kills
         {
             get
