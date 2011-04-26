@@ -168,7 +168,7 @@ namespace OrbitClash
 
             // Setup speed limit manipulator.
             this.speedLimitManipulator = new SpeedLimit(Configuration.UniversalSpeedLimit);
-            this.particleSystem.Manipulators.Add(this.speedLimitManipulator);
+            //this.particleSystem.Manipulators.Add(this.speedLimitManipulator);
 
             Events.KeyboardDown += new EventHandler<KeyboardEventArgs>(this.KeyboardDown);
             Events.KeyboardUp += new EventHandler<KeyboardEventArgs>(this.KeyboardUp);
@@ -238,6 +238,11 @@ namespace OrbitClash
                     EnforceCollisions();
                 }
             }
+
+            // Enforce the Ship's speed limit last.
+            ParticleCollection particleCollection = new ParticleCollection();
+            particleCollection.Add(this.particleSystem);
+            this.speedLimitManipulator.Manipulate(particleCollection);
 
             // Render all the particles in the universe.
             this.particleSystem.Render(Video.Screen);
