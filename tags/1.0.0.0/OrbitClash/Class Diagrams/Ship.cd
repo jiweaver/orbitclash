@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="OrbitClash.Ship">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="~Ship" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="disposed" Hidden="true" />
+      <Field Name="player" Hidden="true" />
+      <Field Name="respawnTime" Hidden="true" />
+      <Property Name="RespawnTime" Hidden="true" />
+      <Field Name="shields" Hidden="true" />
+      <Field Name="shipPhotoSurface" Hidden="true" />
+      <Property Name="ShipPhotoSurface" Hidden="true" />
+      <Field Name="spawnTime" Hidden="true" />
+      <Property Name="SpawnTime" Hidden="true" />
+      <Field Name="speedLimiter" Hidden="true" />
+      <Field Name="spriteSheet" Hidden="true" />
+      <Property Name="SpriteSheet" Hidden="true" />
+      <Field Name="topSpeed" Hidden="true" />
+    </Members>
+    <AssociationLine Name="forwardThruster" Type="OrbitClash.Thruster">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.016" Y="0.102" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="reverseThruster" Type="OrbitClash.Thruster">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.037" Y="0.081" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CBYAIEAEQCABIAAgAAEAAOAAgAAiAAABABwAgYAUIIA=</HashCode>
+      <FileName>Ship.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="forwardThruster" />
+      <Field Name="reverseThruster" />
+      <Field Name="cannon" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OrbitClash.Thruster">
+    <Position X="4" Y="3" Width="3" />
+    <Members>
+      <Method Name="~Thruster" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="disposed" Hidden="true" />
+      <Field Name="engineLength" Hidden="true" />
+      <Property Name="EngineLength" Hidden="true" />
+      <Field Name="exhaustConeDegRange" Hidden="true" />
+      <Field Name="owner" Hidden="true" />
+      <Field Name="power" Hidden="true" />
+      <Field Name="reverseThruster" Hidden="true" />
+      <Field Name="thrusterChannel" Hidden="true" />
+      <Field Name="thrusterSound" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIIEAEAAACAAgAAACAEAAEgAAAECAAABCAAAAIAAAAA=</HashCode>
+      <FileName>Thruster.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.245" />
+  </Class>
+  <Class Name="OrbitClash.Cannon">
+    <Position X="3.75" Y="0.5" Width="1.75" />
+    <Members>
+      <Method Name="~Cannon" Hidden="true" />
+      <Field Name="barrelLength" Hidden="true" />
+      <Property Name="BarrelLength" Hidden="true" />
+      <Field Name="bulletCollection" Hidden="true" />
+      <Field Name="bulletLife" Hidden="true" />
+      <Field Name="bulletSurface" Hidden="true" />
+      <Field Name="cooldown" Hidden="true" />
+      <Property Name="Cooldown" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="disposed" Hidden="true" />
+      <Field Name="dryFireSound" Hidden="true" />
+      <Field Name="fireSound" Hidden="true" />
+      <Field Name="lastFiredTime" Hidden="true" />
+      <Property Name="LastFiredTime" Hidden="true" />
+      <Field Name="muzzleSpeed" Hidden="true" />
+      <Field Name="owner" Hidden="true" />
+      <Field Name="power" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ABIAAAAAECAAwAAAAUAAFAAAgCEEAQAhAEAAEAAQAAA=</HashCode>
+      <FileName>Cannon.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

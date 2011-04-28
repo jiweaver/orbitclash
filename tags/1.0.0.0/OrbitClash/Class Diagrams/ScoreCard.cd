@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="OrbitClash.ScoreCard">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <Members>
+      <Method Name="~ScoreCard" Hidden="true" />
+      <Field Name="bulletsText" Hidden="true" />
+      <Field Name="defeats" Hidden="true" />
+      <Field Name="defeatsText" Hidden="true" />
+      <Field Name="displayPosition" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="disposed" Hidden="true" />
+      <Field Name="font" Hidden="true" />
+      <Field Name="kills" Hidden="true" />
+      <Field Name="killsText" Hidden="true" />
+      <Field Name="player" Hidden="true" />
+      <Field Name="scoreCard" Hidden="true" />
+      <Field Name="shieldsText" Hidden="true" />
+      <Field Name="suicides" Hidden="true" />
+      <Field Name="suicidesText" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>FAJAAASAACBIAIAACQAAAAEAAABAAAABAAAQABAAAAA=</HashCode>
+      <FileName>ScoreCard.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
