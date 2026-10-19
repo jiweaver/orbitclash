@@ -105,7 +105,7 @@ namespace OrbitClash
 
         private float GetForce(double distance)
         {
-            double distancePercentage = distance / Configuration.Planet.GravityWellRadius * 100;
+            double distancePercentage = distance / this.radius * 100;
             double force = 1d / Math.Pow(distancePercentage, 2) * this.power;
 
             float result = Convert.ToSingle(force);
